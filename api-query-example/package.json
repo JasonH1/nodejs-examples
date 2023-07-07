@@ -1,0 +1,38 @@
+{
+  "name": "sab-search",
+  "version": "1.0.0",
+  "description": "SAB Search NodeJS API",
+  "author": "Jason Ho",
+  "homepage": "https://github.com/JasonH1/sab-search",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JasonH1/sab-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JasonH1/sab-search/issues"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "~4.1.2"
+  },
+  "private": true,
+  "main": "server.js",
+  "dependencies": {
+    "async": "^1.4.2",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-hbs": "^0.8.4",
+    "form-data": "^0.2.0",
+    "jwt-simple": "^0.3.1",
+    "method-override": "^2.3.5",
+    "moment-timezone": "^0.4.0",
+    "request": "^2.64.0",
+    "serve-favicon": "^2.3.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    
+  }
+}

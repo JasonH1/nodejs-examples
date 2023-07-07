@@ -1,0 +1,17 @@
+{
+  "query": {
+    "bool": {
+      "must": [{
+        "term": {
+          "status": "active"
+        }
+      }],
+      "must_not": []
+    }
+  },
+  "sort": [{
+    "cdate": "desc"
+  }],
+  "from": "<from>",
+  "size": "<size>"
+}

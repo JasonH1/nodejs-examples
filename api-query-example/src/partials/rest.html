@@ -1,0 +1,106 @@
+<div class="wrapper">
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <span href="/">
+          <a class='brand' rel="nofollow" href='https://github.com/JasonH1'>Node.js REST framework <span class="version">2.0.0</span></a>
+        </span>
+        <ul class="nav pull-right">
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <ul class="breadcrumb">
+    <li>
+      <a href="{{ url }}" class="active">{{ title }}</a>
+    </li>
+  </ul>
+
+  <!-- Content -->
+  <div id="content">
+    <form id="get-form" class="pull-right">
+      <fieldset>
+        <div class="btn-group format-selection">
+          <a class="btn btn-primary js-tooltip" href='{{ url }}' rel="nofollow" title="Make a GET request on the Topic List resource">GET</a>
+
+          <button class="btn btn-primary dropdown-toggle js-tooltip" data-toggle="dropdown" title="Specify a format for the GET request">
+            <span class="caret"></span>
+          </button>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="js-tooltip format-option" href='/2013/12/?format=json' rel="nofollow" title="Make a GET request on the Topic List resource with the format set to `json`">json</a>
+            </li>
+            <li>
+              <a class="js-tooltip format-option" href='/2013/12/?format=api' rel="nofollow" title="Make a GET request on the Topic List resource with the format set to `api`">api</a>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+    </form>
+    <form class="button-form" action="{{ url }}" method="POST" class="pull-right">
+      <input type='hidden' name='csrfmiddlewaretoken' value='tLtRfx6Pd3FJizqzirQJEFyYhuveoqWo' />
+      <input type="hidden" name="_method" value="OPTIONS" />
+      <button class="btn btn-primary js-tooltip" title="Make an OPTIONS request on the Topic List resource">OPTIONS</button>
+    </form>
+
+    <div class="content-main">
+      <div class="page-header"><h1>{{ title }}</h1></div>
+      View for list of topics, filter, search and create
+
+      <div class="request-info" style="clear: both" >
+        <pre class="prettyprint"><b>{{ method }}</b> {{ url }}</pre>
+      </div>
+
+      <div class="response-info">
+        <pre class="prettyprint"><div class="meta nocode"><b>HTTP 200 OK</b>
+<b>Content-Type:</b> <span class="lit">application/json</span>
+<b>Vary:</b> <span class="lit">Accept</span>
+<b>Allow:</b> <span class="lit">GET, POST, HEAD, OPTIONS</span></div>
+{{ body }}</pre>
+      </div>
+    </div>
+
+    <div>
+      <div class="well tab-content">
+        <div id="generic-content-form">
+          <form action="{{ url }}" method="POST" class="form-horizontal">
+            <fieldset>
+              <input type='hidden' name='csrfmiddlewaretoken' value='tLtRfx6Pd3FJizqzirQJEFyYhuveoqWo' />
+
+              <div class="control-group">
+                <label for="id__content_type" class="control-label">Media type</label>
+                <div class="controls">
+                  <select id="id__content_type" name="_content_type">
+                    <option value="application/json" selected="selected">application/json</option>
+                    <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+                    <option value="multipart/form-data">multipart/form-data</option>
+                  </select>
+                  <span class="help-block"></span>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="id__content" class="control-label">Content</label>
+                <div class="controls">
+                  <textarea cols="40" id="id__content" name="_content" rows="10"></textarea>
+                  <span class="help-block"></span>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-primary" title="Make a POST request on the Topic List resource">POST</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Content -->
+
+  <div id="push"></div>
+
+</div><!-- ./wrapper -->

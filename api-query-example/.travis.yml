@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "4.1.1"
+services:
+  - redis-server
+  - elasticsearch
+before_script:
+- npm install
+- npm install -g grunt
+- npm install -g grunt-cli
+- grunt jshint
+- grunt jscs
+- grunt specs
+- grunt e2e

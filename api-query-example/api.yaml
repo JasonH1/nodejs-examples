@@ -1,0 +1,217 @@
+# online editor with validation
+# http://editor.swagger.io/
+
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: SAB Search API description
+# basePath prefixes all resource paths
+basePath: /
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+tags:
+  - name: posts
+    description: Routes to work with posts for sale
+  - name: users
+    description: Routes to work with users
+
+paths:
+  /posts:
+    get:
+      tags:
+      - items
+      summary: Get items list by query (default is *)
+      description: Returns list of items details or error if failed
+      operationId: items-list
+      parameters:
+        - name: x-access-token
+          in: header
+          type: string
+          required: false
+          description: Valid access token.
+        - name: userid
+          type: string
+          in: query
+          description: Parameter for search by user
+        - name: location_id
+          type: string
+          in: query
+          description: Parameter for search by areaid
+        - name: city
+          type: string
+          in: query
+          description: Parameter for search by city
+        - name: district
+          type: string
+          in: query
+          description: Parameter for search by district
+
+        - name: sort
+          type: string
+          in: query
+          required: false
+          description: Soring results (asc, desc)
+        - name: page
+          type: string
+          in: query
+          required: false
+          description: Page index (default is '1')
+        - name: per_page
+          type: string
+          in: query
+          required: false
+          description: Quantity of locations per page (default is '20')
+        - name: from
+          type: string
+          in: query
+          required: false
+          description: Selection start index (overrides 'page')
+        - name: size
+          type: string
+          in: query
+          required: false
+          description: Selection quantity (overrides 'per_page')
+        - name: ignoreLogs
+          type: boolean
+          in: query
+          required: false
+          description: If equal true ignoring search logs in ES
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/ItemResponse'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/Error'
+  /items/{id}:
+    get:
+      tags:
+      - items
+      summary: Get item by index and id
+      description: Returns item details or error if failed
+      operationId: items-one
+      parameters:
+        - name: x-access-token
+          in: header
+          type: string
+          required: false
+          description: Valid access token.
+        - name: id
+          in: path
+          type: string
+          required: true
+          description: id of specific item
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/ItemWrapper'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/Error'
+
+
+
+definitions:
+# ITEMS
+  ItemResponse:
+    properties:
+      took:
+        type: number
+      timed_out:
+        type: boolean
+      _shards:
+        $ref: '#/definitions/Shards'
+      hits:
+        $ref: '#/definitions/ItemList'
+      sortParams:
+        type: array
+        items:
+            type: string
+  ItemList:
+    properties:
+      total:
+        type: number
+      max_score:
+        type: number
+      _shards:
+        $ref: '#/definitions/Shards'
+      hits:
+        type: array
+        items:
+          $ref: '#/definitions/ItemWrapper'
+  ItemWrapper:
+    properties:
+      _index:
+        type: string
+      _type:
+        type: string
+      _id:
+        type: string
+      _version:
+        type: number
+      found:
+        type: boolean
+      _source:
+        $ref: '#/definitions/Item'
+  Item:
+    properties:
+      userid:
+        type: string
+      username:
+        type: string
+      displayname:
+        type: string
+      category:
+        type: string
+      image:
+        type: string
+      video:
+        type: string
+      city:
+        type: string
+      district:
+        type: string
+      likes:
+        type: integer
+      cdate:
+        type: string
+      udate:
+        type: string
+      active:
+        type: boolean
+      geo:
+        $ref: '#/definitions/GeoCoordinates'
+      image_geo:
+        $ref: '#/definitions/GeoCoordinates'
+# END ITEMS
+  GeoCoordinates:
+    required:
+    - lat
+    - lon
+    properties:
+      lat:
+        type: number
+      lon:
+        type: number
+
+  Shards:
+    properties:
+      total:
+        type: number
+      successful:
+        type: number
+      failed:
+        type: number
+
+  Error:
+    properties:
+      error:
+        type: string
