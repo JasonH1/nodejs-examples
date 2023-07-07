@@ -1,9 +1,9 @@
 {
   "type": "service_account",
-  "project_id": "mypets-1c71e",
-  "private_key_id": "7c0bb9008212a6cfed380dd147f0956373575121",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC/ZL8ZqGG3OmB2\nx+ccSvQjFwJaNQO8ALIx65CjHAYILnaBL+GxQwrLWSSOZZ/dRsZ8+Oazp/tt7OIo\ndybfaz/7hzuxsyvNHbtNqs9VmDAr1X0lVuTNnbd7AORjuPZ6PJx1vH9uVde9f5g7\nS8YQbUhzg26II/B0cBcEuofp6ibyZDp/ktULnChUgcfRGN5v81L/1Nf0FolRiILN\nJzVglDpBzGPiFY38dm1J21fRa2yXmYvreoXjFcwM7LhCtNuIvG5aUFPYrs1/yzcj\n4znyeW4qzkA0kXQ6op9mzU9jvmM6VqL2yPaYmcneUFC9yEkRoD7q8hUsbwu4+Wqu\n5rMpool9AgMBAAECggEAVdDNYqq+DZLON9QQCv6MksM5WcsVfpFtVLbDpm7lQXvb\nxLb8YiemSmEQ5Awq7uNSEizj/D/gm3wwN2addmW3TYdoO5gTlqezGPLyffV7+9uA\nfmKEurDx2OQgg5omYc6VdLDtDkLNNflk/4lNKIZniuuufrpmkT7FA2jDkh1cEygY\nOj3B09QmQduuvnlMPbZjx2e9gmcyttrjHhhJRG+uE5kRa/B+izpWOyMRamWVzPIn\nJCx7AERfT4+B+I+Y2HEw8qx5hEqv9Unjy0lDFwH2Sn4WXBzLepaeVdK+33HjaNRM\n0H0D3zFq5WEU8Zyu4FoDTNXrzxFkaAVWVU2RX6sSQQKBgQDy9R9h+TRpLLIdgSDl\naqkb+zh+i3sbWai7AOmN6CDnmqcccLtsH64d2M3DMZJiI2tPE8vwHPp9AUUQR5zM\nXwrwgED3vTjAlQ4ivdyE+ahJfka8aSwSrNRROZnGIkZwK/aFRxdoSvrBXpXWNF3M\nAlqo/bN67XS3VYEmITPgoa9IjQKBgQDJqv+2ACL04cSPoFptwG8dRqs0Lmn9BITE\nZntkeDCIYrrGjLwBrthzE/anmE2juhOqX+5dEfMQNzdUIvsflaJARLLzYhq4nKD3\nL5f1Jn4/JUGGRFelWwO1zRT3+VX7n1guuE+oJBbE56T+AtrTFvKvnF6qXzOWyYp9\ndElkuU7gsQKBgBY2oy/qAQi8tWxNKhzPq7aLOZcYWaEeiXbPlosK9jc2xKCtDfXM\nz7aa4/U8yw19/4mzXaoOfDiBrTbX1VY6Ol3S3B3Khy3Ucv5qLYda7DAMA5umYgkz\nFBZ5Fb4v1BDddCSrY1B9yn9zjm+PSiQk8vUQfSB4JXu9rZk23+9h2QzhAoGADXsl\n3ufBbndNKYDBqsaLZvybY0CbCzPrICnto7i5HdTjwXQU+VPT2lWCTo/K2OAOgnwp\nNgWGJxZZ14EDIohhMUSmZciwGpk11XBUCypIlDYMXEpjRYWBCP0toqoDSm/LeEwP\n3yCSeRU3HVfZgvTswjqExYTZsQHGBT7pzRbqI/ECgYA0aTYnJ0voL7heQ1lAK68c\nM/eay9CNXzTAww/SSj9RyZhZM7rdwEHlZYjXjmIY5IzYiEJf8NPxQ5FzlPp/HdSj\n87TUz7tuHVQKD13tp5tc+vw3GSyUllCWXeyJqqlh/d/dCmSL3oAJFSPyWBpXh9ij\nSGkGq9kIvMSKHJQWf++ueQ==\n-----END PRIVATE KEY-----\n",
-  "client_email": "nodejs-service@mypets-1c71e.iam.gserviceaccount.com",
+  "project_id": "project id",
+  "private_key_id": "Add keyid7c0bb9008212a6cfed380dd147f0956373575121",
+  "private_key": "Add key",
+  "client_email": "XXX",
   "client_id": "116300686873218208533",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://accounts.google.com/o/oauth2/token",
