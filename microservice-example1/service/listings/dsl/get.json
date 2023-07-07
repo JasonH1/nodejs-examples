@@ -1,0 +1,13 @@
+{
+  "query": {
+    "query_string": {
+      "default_field": "player",
+      "query": "<query>"
+    }
+  },
+  "sort": [{
+    "post_date": "desc"
+  }],
+  "from": "<from>",
+  "size": "<size>"
+}

@@ -1,0 +1,17 @@
+{
+  "query": {
+    "bool": {
+      "must": {
+        "term": {
+          "status": "<status>"
+        }
+      }
+    }
+
+  },
+  "sort": [{
+    "post_date": "desc"
+  }],
+  "from": "<from>",
+  "size": "<size>"
+}
